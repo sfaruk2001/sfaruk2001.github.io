@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    gap: 100px;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+h1 {
+    font-size: 100px;
+}
+
+ul li {
+    font-size: 30px;
+}
+
+
+
+
