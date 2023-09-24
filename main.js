@@ -1,32 +1,14 @@
 
+//elements
+const toDoInput = document.getElementById("inTask");
+const toDoButton = document.getElementById("addButton");
+const toDoList = document.getElementById("toDoList");
 
+//event listeners
 
-var addButton = document.getElementById("addButton");
-addButton.addEventListener("click", newItem);
+toDoButton.addEventListener('click', addTask);
 
-function newItem() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("inTask").value;//text val from search bar
-    var text = document.createTextNode(inputValue);//create text node to put in li
-    li.appendChild(text);
-
-    if (inputValue === "") {
-      alert("You must write something!");
-    } else {
-      document.getElementById("toDoList").appendChild(li);
-    }
-    document.getElementById("inTask").value = "";
+//e rep element that was affected. Automatically passed when you add an event listener.
+function addTask(e) {
+  console.log("Hello world!");
 }
-
-
-/**
- 
-function function1() {
-  var ul = document.getElementById("list");
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode("Four"));
-  li.setAttribute("id", "element4"); // added line
-  ul.appendChild(li);
-  alert(li.id);
-}
- */
