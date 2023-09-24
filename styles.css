@@ -65,15 +65,37 @@ body{
     flex: 1;
 }
 
+.toDoTask {
+    padding: 0px 2px;
+}
+
 .complete {
     background-color: green;
     padding: 10px;
 }
 
+.complete:hover {
+    background-color: rgb(34, 190, 34);
+}
+
 .delete {
-    background-color: red;
+    background-color: rgb(167, 29, 29);
     padding: 10px;
 }
+
+.delete:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.dueDate {
+    align-self: stretch;
+}
+
+i {
+    pointer-events: none;
+}
+
+
 
 
 
