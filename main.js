@@ -16,7 +16,7 @@ function addTask(e) {
 
   //create a list item
   const newTask = document.createElement('li');
-  newTask.innerText = "placeholder";
+  newTask.innerText = toDoInput.value;
   newTask.classList.add('toDoTask');
 
   toDoDiv.appendChild(newTask);
