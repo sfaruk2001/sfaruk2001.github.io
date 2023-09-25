@@ -86,6 +86,8 @@ function completeTask(e) {
   const listItem = e.target.previousElementSibling;
   if (listItem.style.textDecoration !== "line-through") {
     listItem.style.textDecoration = "line-through";
+    let audio = new Audio("mixkit-achievement-bell-600.wav");
+    audio.play();
   } else {
     listItem.style.textDecoration = "none";
   }
