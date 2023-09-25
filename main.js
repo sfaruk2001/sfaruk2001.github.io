@@ -45,6 +45,27 @@ function addTask(e) {
     inDate.classList.add("dueDate");
     toDoDiv.appendChild(inDate);
 
+    //drop down color
+
+    //Create array of options to be added
+    var arr = ["Green", "Yellow", "Red"];
+
+    //Create and append select list
+    const selectList = document.createElement("select");
+    selectList.classList.add("mySelect");
+    toDoDiv.appendChild(selectList);
+
+    //Create and append the options
+    for (var i = 0; i < arr.length; i++) {
+      var option = document.createElement("option");
+      option.value = arr[i];
+      option.text = arr[i];
+      selectList.appendChild(option);
+    }
+    toDoDiv.style.color = "Green";
+    selectList.addEventListener('change', colorText);
+
+
     //add to list
     toDoList.appendChild(toDoDiv);
 
@@ -63,8 +84,22 @@ function deleteTask(e) {
 
 function completeTask(e) {
   const listItem = e.target.previousElementSibling;
-  listItem.style.textDecoration = "line-through"; 
-  //const listItem = e.target.parentElement;//parent div
+  if (listItem.style.textDecoration !== "line-through") {
+    listItem.style.textDecoration = "line-through";
+  } else {
+    listItem.style.textDecoration = "none";
+  }
   
   
+}
+
+function colorText(e) {
+  const selectColor = e.target;//select element
+  if (selectColor.value === "Green") {
+    selectColor.parentElement.style.color = "Green";
+  } else if (selectColor.value === "Yellow") {
+    selectColor.parentElement.style.color = "Yellow";
+  } else {
+    selectColor.parentElement.style.color = "Red";
+  }
 }

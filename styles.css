@@ -48,7 +48,8 @@ body{
 }
 
 #toDoList {
-    min-width: 70%;
+    min-width: 50%;
+    border: none;
 }
 
 .toDo {
@@ -87,12 +88,19 @@ body{
     background-color: rgb(255, 0, 0);
 }
 
-.dueDate {
+.dueDate, .delete, .complete {
     align-self: stretch;
+    border: none;
 }
 
 i {
     pointer-events: none;
+}
+
+.mySelect {
+    align-self: stretch;   
+    border-radius: 0;
+    border: none;
 }
 
 
